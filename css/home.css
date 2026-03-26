@@ -1,0 +1,280 @@
+:root {
+  --bg: #ffffff;
+  --band: #f3f3f3;
+  --text: #111111;
+  --muted: #2c2c2c;
+  --link: #4b8bd7;
+  --line: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Sans 3", Arial, sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.content-shell {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.topbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.brand {
+  color: var(--muted);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.topnav a {
+  color: #5a5a5a;
+  font-size: 1rem;
+}
+
+.intro-band {
+  background: var(--band);
+  padding: 30px 0 30px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.portrait-wrap {
+  width: 150px;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  border-radius: 20px;
+  background: #d9d9d9;
+}
+
+.intro-copy h1,
+.content-section h2 {
+  margin: 0 0 18px;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 700;
+}
+
+.intro-copy h1 {
+  margin-bottom: 12px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.intro-line {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(0.98rem, 1.45vw, 1.18rem);
+  line-height: 1.18;
+}
+
+.icon-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.icon-links a {
+  color: #103d73;
+  font-size: 1.25rem;
+}
+
+.content {
+  padding: 40px 0 60px;
+}
+
+.prose,
+.plain-list,
+.contact-line {
+  font-size: clamp(0.98rem, 1.08vw, 1.05rem);
+  line-height: 1.58;
+}
+
+.prose {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
+.prose p {
+  max-width: 880px;
+  margin: 0 0 16px;
+}
+
+.prose ul,
+.plain-list {
+  margin: 0;
+  max-width: 880px;
+  padding-left: 24px;
+}
+
+.prose li,
+.plain-list li {
+  margin-bottom: 12px;
+}
+
+.content-section {
+  margin-top: 32px;
+}
+
+.content-section h2 {
+  font-size: clamp(1.48rem, 2vw, 1.72rem);
+}
+
+.section-note {
+  margin: 0 0 14px;
+  font-size: clamp(0.95rem, 1.05vw, 1rem);
+  line-height: 1.45;
+}
+
+.publication-list {
+  margin: 0;
+  padding-left: 32px;
+}
+
+.publication-item {
+  margin-bottom: 18px;
+}
+
+.pub-title,
+.pub-authors,
+.pub-venue,
+.pub-meta {
+  margin: 0 0 5px;
+}
+
+.pub-title {
+  color: var(--link);
+  font-size: clamp(1.02rem, 1.18vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pub-title a {
+  color: var(--link);
+}
+
+.pub-title a:visited,
+.pub-title a:active,
+.pub-title a:hover {
+  color: var(--link);
+}
+
+.pub-title a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.pub-authors,
+.pub-venue {
+  color: #000000;
+  font-size: clamp(0.93rem, 1vw, 0.98rem);
+  line-height: 1.45;
+}
+
+.pub-meta {
+  color: #5c5c5c;
+  font-size: clamp(0.86rem, 0.95vw, 0.92rem);
+}
+
+.contact-line {
+  margin: 0 0 14px;
+}
+
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .portrait-wrap {
+    width: min(280px, 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell,
+  .content-shell {
+    width: min(100% - 24px, 1400px);
+  }
+
+  .topbar-inner {
+    display: block;
+  }
+
+  .topnav {
+    margin-top: 10px;
+    gap: 14px;
+  }
+
+  .intro-band {
+    padding: 28px 0 38px;
+  }
+
+  .prose,
+  .plain-list,
+  .contact-line {
+    font-size: 0.98rem;
+  }
+
+  .section-note,
+  .pub-title,
+  .pub-authors,
+  .pub-venue,
+  .pub-meta {
+    font-size: 0.96rem;
+  }
+}
