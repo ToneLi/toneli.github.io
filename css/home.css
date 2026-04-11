@@ -192,7 +192,8 @@ img {
 .pub-title,
 .pub-authors,
 .pub-venue,
-.pub-meta {
+.pub-meta,
+.pub-links {
   margin: 0 0 5px;
 }
 
@@ -228,6 +229,22 @@ img {
 .pub-meta {
   color: #5c5c5c;
   font-size: clamp(0.86rem, 0.95vw, 0.92rem);
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.pub-links a {
+  display: inline-flex;
+}
+
+.pub-links img {
+  height: 17px;
+  width: auto;
 }
 
 .contact-line {
