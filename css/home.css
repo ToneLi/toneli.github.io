@@ -171,12 +171,25 @@ img {
 }
 
 .content-section h2 {
-  font-size: clamp(1.48rem, 2vw, 1.72rem);
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.content-section h3,
+.prose h3 {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #20252b;
+  margin: 22px 0 12px;
 }
 
 .section-note {
   margin: 0 0 14px;
-  font-size: clamp(0.95rem, 1.05vw, 1rem);
+  font-size: 0.9rem;
+  color: #66717c;
   line-height: 1.45;
 }
 
@@ -187,25 +200,29 @@ img {
 
 .publication-item {
   margin-bottom: 18px;
+  padding-left: 4px;
+}
+
+.publication-item::marker {
+  color: #718096;
+  font-weight: 600;
 }
 
 .pub-title,
 .pub-authors,
-.pub-venue,
-.pub-meta,
-.pub-links {
-  margin: 0 0 5px;
+.pub-venue {
+  margin: 0;
 }
 
 .pub-title {
   color: var(--link);
-  font-size: clamp(1.02rem, 1.18vw, 1.1rem);
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .pub-title a {
-  color: var(--link);
+  color: #193e62;
 }
 
 .pub-title a:visited,
@@ -214,9 +231,32 @@ img {
   color: var(--link);
 }
 
-.pub-title a:hover {
-  color: var(--link);
-  text-decoration: underline;
+.pub-authors {
+  margin-top: 3px;
+}
+
+.pub-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 14px;
+  margin-top: 5px;
+}
+
+.pub-resources {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.pub-resources a {
+  display: inline-flex;
+}
+
+.pub-resources img {
+  height: 18px;
+  width: auto;
 }
 
 .pub-authors,
@@ -226,25 +266,10 @@ img {
   line-height: 1.45;
 }
 
-.pub-meta {
-  color: #5c5c5c;
-  font-size: clamp(0.86rem, 0.95vw, 0.92rem);
-}
-
-.pub-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-}
-
-.pub-links a {
-  display: inline-flex;
-}
-
-.pub-links img {
-  height: 17px;
-  width: auto;
+.unavailable-link {
+  color: #858b93;
+  background: #fafafa;
+  border-color: #e8e8e8;
 }
 
 .contact-line {
@@ -290,8 +315,7 @@ img {
   .section-note,
   .pub-title,
   .pub-authors,
-  .pub-venue,
-  .pub-meta {
+  .pub-venue {
     font-size: 0.96rem;
   }
 }
