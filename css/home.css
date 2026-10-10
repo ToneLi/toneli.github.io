@@ -73,5 +73,20 @@ img { max-width: 100%; }
   .content-section h2 { font-size: 23px; }
   .pub-details { gap: 6px 10px; }
 }
+.opportunity-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 26px;
+  padding: 15px 20px;
+  border: 1px solid #ffaaaa;
+  border-radius: 12px;
+  background: #fff6f6;
+  color: #cf2929;
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.opportunity-banner i { flex-shrink: 0; font-size: 22px; }
 #publications { font-size: 19px; font-weight: 500; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
