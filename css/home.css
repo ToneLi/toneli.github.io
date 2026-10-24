@@ -37,6 +37,11 @@ img { max-width: 100%; }
 .content-section h2 { font-size: 25px; line-height: 1.3; font-weight: 400; letter-spacing: -.3px; margin: 0 0 12px; }
 .content-section h3 { font-size: 18px; font-weight: 500; color: #242424; margin: 23px 0 16px; padding-bottom: 7px; border-bottom: 1px solid var(--line); }
 .section-note { margin: 0 0 12px; font-size: 15px; color: var(--muted); }
+.news-card { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; background: #fafafa; }
+.news-card p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
+.news-links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 15px; }
+.news-links a { color: var(--text); text-decoration: underline; text-decoration-color: #b9b9b9; text-underline-offset: 3px; }
+.news-links a:hover { color: var(--link); text-decoration-color: currentColor; }
 .publication-list { margin: 0; padding-left: 23px; }
 .publication-item { padding-left: 3px; margin-bottom: 22px; }
 .publication-item::marker { font-size: 15px; color: #777; }
